@@ -1,0 +1,5 @@
+name: hands-on-dvc
+runtime: java
+description: A minimal Google Cloud Java Pulumi program
+backend:
+  url: gs://hands-on-dvc-pulumi-state

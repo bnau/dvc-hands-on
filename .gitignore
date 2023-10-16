@@ -1,0 +1,9 @@
+/.idea/
+/venv/
+/venv_wsl/
+/iac/target/classes/META-INF/hands-on-dvc.kotlin_module
+/iac/target/classes/myproject/App$Companion.class
+/iac/target/classes/myproject/App.class
+/iac/target/classes/myproject/AppKt.class
+/iac/target/classes/myproject/DockerImageKt.class
+/iac/hands-on-dvc.iml
