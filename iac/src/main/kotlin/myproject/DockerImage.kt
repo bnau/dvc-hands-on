@@ -11,17 +11,22 @@ import com.pulumi.gcp.artifactregistry.Repository
 import com.pulumi.gcp.artifactregistry.RepositoryArgs
 import com.pulumi.gcp.artifactregistry.RepositoryIamBinding
 import com.pulumi.gcp.artifactregistry.RepositoryIamBindingArgs
-import com.pulumi.gcp.artifactregistry.inputs.RepositoryDockerConfigArgs
+import com.pulumi.gcp.projects.Service
+import com.pulumi.gcp.projects.ServiceArgs
 import com.pulumi.resources.CustomResourceOptions
 
 fun createDockerImage(context: Context) {
+    val api = Service("artifactregistry.googleapis.com", ServiceArgs.builder()
+        .service("artifactregistry.googleapis.com")
+        .build())
     val myRepo = Repository("my-repo", RepositoryArgs.builder()
-        .dockerConfig(RepositoryDockerConfigArgs.builder()
-            .immutableTags(true)
-            .build())
         .location("europe-west1")
         .repositoryId("my-repo")
-        .format("DOCKER").build())
+        .format("DOCKER").build(),
+        CustomResourceOptions.builder()
+            .dependsOn(api)
+            .build()
+    )
 
     RepositoryIamBinding("my-repo-binding", RepositoryIamBindingArgs.builder()
         .location(myRepo.location())

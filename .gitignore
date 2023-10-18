@@ -7,3 +7,6 @@
 /iac/target/classes/myproject/AppKt.class
 /iac/target/classes/myproject/DockerImageKt.class
 /iac/hands-on-dvc.iml
+/iac/target/
+/resources/base.keras
+/resources/data.zip
