@@ -14,7 +14,7 @@ fun createGitRepo() {
         Command("git-configure-and-push",
             CommandArgs.builder()
                 .dir("../solutions")
-                .create("git remote rm origin && git remote add origin ${it} && git push -u origin master")
+                .create("git remote rm origin && git remote add origin $it && git push --all origin")
                 .archivePaths(("../solutions"))
                 .triggers(listOf(System.currentTimeMillis().toString()))
                 .build(),

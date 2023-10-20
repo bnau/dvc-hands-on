@@ -6,8 +6,7 @@ class App {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            Pulumi.run { context ->
-                createDockerImage(context)
+            Pulumi.run {
                 createGitRepo()
                 createStorage()
             }
