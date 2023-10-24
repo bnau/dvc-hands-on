@@ -8,7 +8,8 @@
 /iac/target/classes/myproject/DockerImageKt.class
 /iac/hands-on-dvc.iml
 /iac/target/
-/resources/base.keras
 /resources/data.zip
 /resources/data-v2.zip
 /resources/prerequisites/
+/resources/base.h5
+/resources/my-better-exp.zip
