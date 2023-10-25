@@ -1,3 +1,5 @@
 encryptionsalt: v1:WIuQDwx0oY4=:v1:Dh9uZGX6DMBFHldJ:NJdVs3DC8lGjWeFPHkq2AAWE7/FJ5w==
 config:
   gcp:project: hands-on-dvc
+  attendees:
+    - naubertrand@gmail.com

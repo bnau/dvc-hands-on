@@ -1,18 +1,17 @@
 package myproject
 
+import com.pulumi.Config
 import com.pulumi.asset.FileAsset
 import com.pulumi.command.local.Command
 import com.pulumi.command.local.CommandArgs
 import com.pulumi.core.Output
 import com.pulumi.gcp.storage.*
-import com.pulumi.resources.CustomResourceOptions
 import java.nio.file.Files
 import java.nio.file.Paths
 
-fun createStorage() {
-
-    val buckets = listOf("naubertrand@gmail.com", "bertrand.nau@wescale.fr").map { usermail ->
-        val username = """(?<name>.*)@.*""".toRegex().matchEntire(usermail)?.groups?.get("name")?.value
+fun createStorage(config: Config) {
+    val buckets = config.requireObject("attendees", List::class.java).map { usermail ->
+        val username = """(?<name>.*)@.*""".toRegex().matchEntire(usermail.toString())?.groups?.get("name")?.value
             ?.replace(".", "_")
             ?: error("Invalid email")
 

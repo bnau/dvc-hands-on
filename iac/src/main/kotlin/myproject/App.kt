@@ -8,7 +8,7 @@ class App {
         fun main(args: Array<String>) {
             Pulumi.run {
                 createGitRepo()
-                createStorage()
+                createStorage(it.config())
             }
         }
     }
