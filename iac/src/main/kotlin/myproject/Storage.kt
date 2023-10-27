@@ -35,7 +35,9 @@ fun createStorage(config: Config) {
             CommandArgs.builder()
                 .dir("../solutions")
                 .create(
-                    it.fold("") { acc, s -> "$acc dvc remote add -d $s gs://$s --force && dvc push -r $s && " }
+                    it.fold("dvc exp pull origin && dvc exp apply my-better-exp && dvc exp run && dvc pull && ") { acc, s ->
+                        "$acc dvc remote add -d $s gs://$s --force && dvc push -r $s && "
+                    }
                         .removeSuffix(" && ")
                 )
                 .build())
