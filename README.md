@@ -76,7 +76,7 @@ Nos devrons récupérer le modèle pré-entraîné: [https://storage.googleapis.
 
 Les étapes sont les suivantes :
 
-1. [Cloud shell](docs/01.first_step.md)
+1. [Dans la peau d'un projet Grosses Données](docs/01.first_step.md)
 2. [Surveillons les fichers](docs/02.track_files.md)
 3. [Stoackage distant de l'état](docs/03.remote-storage.md)
 4. [Séparons les fichers](docs/04.split-file.md)
