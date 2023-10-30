@@ -22,7 +22,7 @@ Lorsque le mode éphémère est activé, la mention "Éphémère" apparaît en h
 
 ![screenshot_ephemeral](./docs/assets/00.ephemeral.png)
 
-Toutes les commandes seront éxécutés depuis le Cloud Sheel Editor.
+Toutes les commandes seront exécutées depuis le Cloud Shell Editor.
 
 ## Exécution du script d'initialisation
 
@@ -47,9 +47,9 @@ Il vous faudra enfin ouvrir le projet dans Cloud Shell Editor.
 /!\ **Important** /!\
 
 > Vous pouvez maintenant suivre le hands-on.
-> Chaque partie (sauf la première) commencera par une étape d'initialisation.
-> Ces étapes sont facultatives.
-> Elles permettent de reprendre à partir du corrigé de l'étape précédente
+> Chaque étape commencera par des instructions pour initialiser son environnement de travail.
+> Ces instructions sont facultatives (sauf pour la première partie).
+> Elles permettent de reprendre à partir du corrigé de l'étape précédente,
 > mais il est préférable de réaliser l'intégralité des exercices.
 
 ## Lançons nous dans l'aventure
@@ -57,22 +57,26 @@ Il vous faudra enfin ouvrir le projet dans Cloud Shell Editor.
 Un collègue a écrit un petit script pour générer un réseau de neurones qui classifie des images de chats ou de chiens.
 Vous venez d'intégrer son équipe et vous devez maintenant monter votre environnement de développement.
 
-Le Notebook de votre collègue est disponible dans le projet Github suivant: [https://github.com/bnau/dvc-project](https://github.com/bnau/dvc-project)
+Votre collègue a mis à disposition un repository Git avec le code source du projet:
 
-> Pas besoin de cloner le repo Git en local. On va plutôt utiliser Cloud Shell Editor tout au long de ce Hands-on.
+[https://github.com/bnau/dvc-project](https://github.com/bnau/dvc-project)
 
 Comme tout réseau de neurones a besoin de données pour s'entraîner,
 et qu'on ne va pas mettre de fichiers volumineux dans Git,
-nous téléchargerons les données d'entraînement depuis un autre endroit : [https://storage.googleapis.com/dvc-input-dependencies-hands-on/data.zip](https://storage.googleapis.com/dvc-input-dependencies-hands-on/data.zip)
+il a également fourni une url permettant de télécharger respectivement les données d'entraînement:
+
+[https://storage.googleapis.com/dvc-input-dependencies-hands-on/data.zip](https://storage.googleapis.com/dvc-input-dependencies-hands-on/data.zip)
 
 Le réseau de neurones n'a pas été entraîné from scratch.
 Il ajoute quelques couches de neurones à un réseau pré-entraîné.
+Votre collègue a également mis à disposition le modèle pré-entraîné:
 
-Nos devrons récupérer le modèle pré-entraîné: [https://storage.googleapis.com/dvc-input-dependencies-hands-on/base.h5](https://storage.googleapis.com/dvc-input-dependencies-hands-on/base.h5)
+[https://storage.googleapis.com/dvc-input-dependencies-hands-on/base.h5](https://storage.googleapis.com/dvc-input-dependencies-hands-on/base.h5)
 
-> Ce hands-on aura pour but d'améliorer un projet existant pour lui pemettre d'étre pilotable via Git.
-> Au début de chaque étape, vous trouverez un lien vers un Cloud Shell Editor pré-configuré pour cette étape.
-> À part pour la première étape, le lien est facultatif. Il permet de reprendre à partir du corrigé de l'étape précédente.
+> Pas besoin de cloner le repo Git ni de télécharger quoique ce soit en local.
+> On va le faire dans l'étape suivante dans Cloud Shell Editor.
+
+Ce hands-on aura pour but d'améliorer un projet existant pour lui permettre d'être pilotable via Git.
 
 Les étapes sont les suivantes :
 
